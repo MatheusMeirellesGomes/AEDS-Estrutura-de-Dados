@@ -33,8 +33,8 @@ void inserirInicio (Lista *lista, int elemento) {
 //Procedimento para inserir na posição. 
 void inserirPos (Lista *lista, int elemento, int pos) {
     //Verificar se a pos é válida e a lista não está vazia 
-    if (pos >= 0 && pos < lista->n && lista->n < MAX) {
-        //Deslocar todos os elementos para a direita. 
+    if (pos >= 0 && pos <= lista->n && lista->n < MAX) {
+        //Deslocar todos os elementos que estão a direita da pos escolhida.
         for (int i = lista->n; i > pos; i--) {
             lista->array[i] = lista->array[i - 1]; //O próxmo lugar no vetor recebe o elemento da pos anterior. 
         }
